@@ -1,4 +1,8 @@
-# KNN classification
+# Linear Classifiers in Python
+
+## Applying logistic regression and SVM
+
+### KNN classification
 
 In this exercise you'll explore a subset of the [Large Movie Review
 Dataset](https://ai.stanford.edu/~amaas/data/sentiment/). The variables
@@ -20,19 +24,11 @@ and keep it handy!*
 
 **Answer**
 
-# Comparing models
+```{python}
 
-Compare k nearest neighbors classifiers with k=1 and k=5 on the
-handwritten digits data set, which is already loaded into the variables
-`X_train`, `y_train`, `X_test`, and `y_test`. You can set k with the
-`n_neighbors` parameter when creating the `KNeighborsClassifier` object,
-which is also already imported into the environment.
+```
 
-Which model has a higher test accuracy?
-
-**InstructionsAnswer**
-
-# Running LogisticRegression and SVC
+### Running LogisticRegression and SVC
 
 In this exercise, you'll apply logistic regression and a support vector
 machine to classify images of handwritten digits.
@@ -45,7 +41,11 @@ machine to classify images of handwritten digits.
 
 **Answer**
 
-# Sentiment analysis for movie reviews
+```{python}
+
+```
+
+### Sentiment analysis for movie reviews
 
 In this exercise you'll explore the probabilities outputted by logistic
 regression on a subset of the [Large Movie Review
@@ -66,7 +66,11 @@ positive (+1) or negative (-1).
 
 **Answer**
 
-# Visualizing decision boundaries
+```{python}
+
+```
+
+### Visualizing decision boundaries
 
 In this exercise, you'll visualize the decision boundaries of various
 classifier types.
@@ -85,7 +89,13 @@ into `X`, along with binary labels in `y`.
 
 **Answer**
 
-# Changing the model coefficients
+```{python}
+
+```
+
+## Loss functions
+
+### Changing the model coefficients
 
 When you call `fit` with scikit-learn, the logistic regression
 coefficients are automatically learned from your dataset. In this
@@ -107,7 +117,11 @@ along with a linear classifier object `model`.
 
 **Answer**
 
-# Minimizing a loss function
+```{python}
+
+```
+
+### Minimizing a loss function
 
 In this exercise you'll implement linear regression "from scratch" using
 `scipy.optimize.minimize`.
@@ -123,7 +137,11 @@ include an intercept in our regression model.
 
 **Answer**
 
-# Comparing the logistic and hinge losses
+```{python}
+
+```
+
+### Comparing the logistic and hinge losses
 
 In this exercise you'll create a plot of the logistic and hinge losses
 using their mathematical expressions, which are provided to you.
@@ -137,7 +155,11 @@ The loss function diagram from the video is shown on the right.
 
 **Answer**
 
-# Implementing logistic regression
+```{python}
+
+```
+
+### Implementing logistic regression
 
 This is very similar to the earlier exercise where you implemented
 linear regression "from scratch" using `scipy.optimize.minimize`.
@@ -158,7 +180,13 @@ in your environment, and the `sklearn` breast cancer prediction dataset
 
 **Answer**
 
-# Regularized logistic regression
+```{python}
+
+```
+
+## Logistic regression
+
+### Regularized logistic regression
 
 In Chapter 1, you used logistic regression on the handwritten digits
 data set. Here, we'll explore the effect of L2 regularization.
@@ -180,7 +208,11 @@ lists.
 
 **Answer**
 
-# Logistic regression and feature selection
+```{python}
+
+```
+
+### Logistic regression and feature selection
 
 In this exercise we'll perform feature selection on the movie review
 sentiment data set using L1 regularization. The features and targets are
@@ -197,7 +229,11 @@ We'll search for the best value of `C` using scikit-learn's
 
 **Answer**
 
-# Identifying the most positive and negative words
+```{python}
+
+```
+
+### Identifying the most positive and negative words
 
 In this exercise we'll try to interpret the coefficients of a logistic
 regression fit on the movie review sentiment dataset. The model object
@@ -215,7 +251,11 @@ word "think" appeared in that movie review.
 
 **Answer**
 
-# Regularization and probabilities
+```{python}
+
+```
+
+### Regularization and probabilities
 
 In this exercise, you will observe the effects of changing the
 regularization strength on the predicted probabilities.
@@ -235,7 +275,11 @@ environment as `X` and `y`.
 
 **Answer**
 
-# Visualizing easy and difficult examples
+```{python}
+
+```
+
+### Visualizing easy and difficult examples
 
 In this exercise, you'll visualize the examples that the logistic
 regression model is most and least confident about by looking at the
@@ -257,7 +301,11 @@ image.
 
 **Answer**
 
-# Fitting multi-class logistic regression
+```{python}
+
+```
+
+### Fitting multi-class logistic regression
 
 In this exercise, you'll fit the two types of multi-class logistic
 regression, one-vs-rest and softmax/multinomial, on the handwritten
@@ -274,7 +322,11 @@ is already loaded and split into `X_train`, `y_train`, `X_test`, and
 
 **Answer**
 
-# Visualizing multi-class logistic regression
+```{python}
+
+```
+
+### Visualizing multi-class logistic regression
 
 In this exercise we'll continue with the two types of multi-class
 logistic regression, but on a toy 2D data set specifically designed to
@@ -297,7 +349,11 @@ it's using behind the scenes.
 
 **Answer**
 
-# One-vs-rest SVM
+```{python}
+
+```
+
+### One-vs-rest SVM
 
 As motivation for the next and final chapter on support vector machines,
 we'll repeat the previous exercise with a non-linear SVM. Once again,
@@ -316,7 +372,13 @@ classifier for class 1 vs. rest.
 
 **Answer**
 
-# Effect of removing examples
+```{python}
+
+```
+
+## Support Vector Machines
+
+### Effect of removing examples
 
 Support vectors are defined as training examples that influence the
 decision boundary. In this exercise, you'll observe this behavior by
@@ -335,7 +397,11 @@ directly.)
 
 **Answer**
 
-# GridSearchCV warm-up
+```{python}
+
+```
+
+### GridSearchCV warm-up
 
 In the video we saw that increasing the RBF kernel hyperparameter
 `gamma` increases training accuracy. In this exercise we'll search for
@@ -352,7 +418,11 @@ image is a "2", is already loaded into the variables `X` and `y`.
 
 **Answer**
 
-# Jointly tuning gamma and C with GridSearchCV
+```{python}
+
+```
+
+### Jointly tuning gamma and C with GridSearchCV
 
 In the previous exercise the best value of `gamma` was 0.001 using the
 default value of `C`, which is 1. In this exercise you'll search for the
@@ -375,7 +445,11 @@ sensible.
 
 **Answer**
 
-# Using SGDClassifier
+```{python}
+
+```
+
+### Using SGDClassifier
 
 In this final coding exercise, you'll do a hyperparameter search over
 the regularization strength and the loss (logistic regression vs. linear
@@ -388,3 +462,7 @@ SVM) using `SGDClassifier()`.
   losses.
 
 **Answer**
+
+```{python}
+
+```
