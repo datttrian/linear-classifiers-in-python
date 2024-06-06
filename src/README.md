@@ -28,6 +28,14 @@ and keep it handy!*
 pip install numpy scikit-learn
 ```
 
+    Defaulting to user installation because normal site-packages is not writeable
+    Requirement already satisfied: numpy in /home/vscode/.local/lib/python3.12/site-packages (1.26.4)
+    Requirement already satisfied: scikit-learn in /home/vscode/.local/lib/python3.12/site-packages (1.5.0)
+    Requirement already satisfied: scipy>=1.6.0 in /home/vscode/.local/lib/python3.12/site-packages (from scikit-learn) (1.13.1)
+    Requirement already satisfied: joblib>=1.2.0 in /home/vscode/.local/lib/python3.12/site-packages (from scikit-learn) (1.4.2)
+    Requirement already satisfied: threadpoolctl>=3.1.0 in /home/vscode/.local/lib/python3.12/site-packages (from scikit-learn) (3.5.0)
+    Note: you may need to restart the kernel to use updated packages.
+
 ```python
 # added/edited
 import numpy as np
@@ -92,9 +100,9 @@ print(svm.score(X_test, y_test))
 ```
 
     1.0
-    0.9644444444444444
-    0.9970304380103935
-    0.9933333333333333
+    0.9511111111111111
+    0.9977728285077951
+    0.98
 
 
     /home/vscode/.local/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
@@ -211,6 +219,20 @@ into `X`, along with binary labels in `y`.
 pip install matplotlib
 ```
 
+    Defaulting to user installation because normal site-packages is not writeable
+    Requirement already satisfied: matplotlib in /home/vscode/.local/lib/python3.12/site-packages (3.9.0)
+    Requirement already satisfied: contourpy>=1.0.1 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (1.2.1)
+    Requirement already satisfied: cycler>=0.10 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (0.12.1)
+    Requirement already satisfied: fonttools>=4.22.0 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (4.53.0)
+    Requirement already satisfied: kiwisolver>=1.3.1 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (1.4.5)
+    Requirement already satisfied: numpy>=1.23 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (1.26.4)
+    Requirement already satisfied: packaging>=20.0 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (24.0)
+    Requirement already satisfied: pillow>=8 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (10.3.0)
+    Requirement already satisfied: pyparsing>=2.3.1 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (3.1.2)
+    Requirement already satisfied: python-dateutil>=2.7 in /home/vscode/.local/lib/python3.12/site-packages (from matplotlib) (2.9.0.post0)
+    Requirement already satisfied: six>=1.5 in /home/vscode/.local/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib) (1.16.0)
+    Note: you may need to restart the kernel to use updated packages.
+
 ```python
 # added/edited
 import matplotlib.pyplot as plt 
@@ -323,7 +345,7 @@ def plot_4_classifiers(X, y, clfs):
 
     <>:66: SyntaxWarning: invalid escape sequence '\D'
     <>:66: SyntaxWarning: invalid escape sequence '\D'
-    /tmp/ipykernel_2885/3944463996.py:66: SyntaxWarning: invalid escape sequence '\D'
+    /tmp/ipykernel_30675/3944463996.py:66: SyntaxWarning: invalid escape sequence '\D'
       cbar.ax.set_ylabel('probability of red $\Delta$ class', fontsize=20, rotation=270, labelpad=30)
 
 ```python
@@ -344,21 +366,21 @@ plot_4_classifiers(X, y, classifiers)
 plt.show()
 ```
 
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
 ![png](notebook_files/notebook_15_1.png)
@@ -409,9 +431,9 @@ num_err = np.sum(y != model.predict(X))
 print("Number of errors:", num_err)
 ```
 
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
 ![png](notebook_files/notebook_18_1.png)
@@ -772,9 +794,9 @@ prob = model.predict_proba(X)
 print("Maximum predicted probability", np.max(prob))
 ```
 
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
 ![png](notebook_files/notebook_38_1.png)
@@ -794,9 +816,9 @@ prob = model.predict_proba(X)
 print("Maximum predicted probability", np.max(prob))
 ```
 
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
 ![png](notebook_files/notebook_39_1.png)
@@ -867,12 +889,12 @@ show_digit(proba_inds[0], lr)
     Please also refer to the documentation for alternative solver options:
         https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
       n_iter_i = _check_optimize_result(
-    /tmp/ipykernel_2885/3635067261.py:13: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+    /tmp/ipykernel_30675/3635067261.py:13: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
       plt.title("label=%d, prediction=%d, proba=%.2f" % (y[i], pred, pred_prob))
 
 ![png](notebook_files/notebook_42_1.png)
 
-    /tmp/ipykernel_2885/3635067261.py:13: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+    /tmp/ipykernel_30675/3635067261.py:13: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
       plt.title("label=%d, prediction=%d, proba=%.2f" % (y[i], pred, pred_prob))
 
 ![png](notebook_files/notebook_42_3.png)
@@ -917,6 +939,8 @@ print("Softmax test accuracy    :", lr_mn.score(X_test, y_test))
 
     /home/vscode/.local/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
       warnings.warn(
+
+
     /home/vscode/.local/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
     STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
     
@@ -925,16 +949,16 @@ print("Softmax test accuracy    :", lr_mn.score(X_test, y_test))
     Please also refer to the documentation for alternative solver options:
         https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
       n_iter_i = _check_optimize_result(
-
-
-    OVR training accuracy: 0.9955456570155902
-    OVR test accuracy    : 0.9755555555555555
-    Softmax training accuracy: 1.0
-    Softmax test accuracy    : 0.9622222222222222
-
-
     /home/vscode/.local/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1247: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. From then on, it will always use 'multinomial'. Leave it to its default value to avoid this warning.
       warnings.warn(
+
+
+    OVR training accuracy: 0.9948032665181886
+    OVR test accuracy    : 0.9577777777777777
+    Softmax training accuracy: 1.0
+    Softmax test accuracy    : 0.9644444444444444
+
+
     /home/vscode/.local/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
     STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
     
@@ -1000,9 +1024,9 @@ plot_classifier(X_train, y_train==1, lr_class_1)
     One-vs-rest training accuracy: 0.916
 
 
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
 ![png](notebook_files/notebook_48_2.png)
@@ -1036,9 +1060,9 @@ svm_class_1.fit(X_train, y_train==1)
 plot_classifier(X_train, y_train==1, svm_class_1)
 ```
 
-    /tmp/ipykernel_2885/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:71: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[0]], X1[y==labels[0]], cmap=plt.cm.coolwarm,
-    /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+    /tmp/ipykernel_30675/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
 ![png](notebook_files/notebook_50_1.png)
@@ -1178,9 +1202,9 @@ print("Best CV accuracy", searcher.best_score_)
 print("Test accuracy of best grid search hypers:", searcher.score(X_test, y_test))
 ```
 
-    Best CV params {'C': 10, 'gamma': 0.001}
-    Best CV accuracy 0.9933209186840471
-    Test accuracy of best grid search hypers: 0.985539488320356
+    Best CV params {'C': 1, 'gamma': 0.001}
+    Best CV accuracy 0.9855307262569832
+    Test accuracy of best grid search hypers: 0.9866518353726362
 
 ### Using SGDClassifier
 
@@ -1218,6 +1242,6 @@ print("Best CV accuracy", searcher.best_score_)
 print("Test accuracy of best grid search hypers:", searcher.score(X_test, y_test))
 ```
 
-    Best CV params {'alpha': 0.1, 'loss': 'hinge'}
-    Best CV accuracy 0.9312718378756115
-    Test accuracy of best grid search hypers: 0.9300476947535771
+    Best CV params {'alpha': 0.001, 'loss': 'hinge'}
+    Best CV accuracy 0.9369671558350803
+    Test accuracy of best grid search hypers: 0.9348171701112877
