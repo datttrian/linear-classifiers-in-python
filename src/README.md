@@ -147,7 +147,6 @@ from sklearn.datasets import load_svmlight_file
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
 vocabulary = pd.read_csv('aclImdb/imdb.vocab', header=None, names=['word']).drop_duplicates()['word'].values
-
 X, y = load_svmlight_file('aclImdb/train/labeledBow.feat')
 y = np.where(y < 5, -1.0, 1.0)
 X = X[:, :len(vocabulary)]
