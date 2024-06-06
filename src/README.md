@@ -24,12 +24,9 @@ and keep it handy!*
 
 **Answer**
 
-
-
 ```python
 pip install numpy scikit-learn
 ```
-
 
 ```python
 # added/edited
@@ -41,7 +38,6 @@ y_train = np.where(y_train < 5, -1.0, 1.0)
 y_test = np.where(y_test < 5, -1.0, 1.0)
 X_train = X_train[:, :X_test.shape[1]]
 ```
-
 
 ```python
 from sklearn.neighbors import KNeighborsClassifier
@@ -57,7 +53,6 @@ print("Prediction for test example 0:", pred)
 
     Prediction for test example 0: -1.0
 
-
 ### Running LogisticRegression and SVC
 
 In this exercise, you'll apply logistic regression and a support vector
@@ -71,15 +66,12 @@ machine to classify images of handwritten digits.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 ```
-
 
 ```python
 from sklearn import datasets
@@ -114,7 +106,6 @@ print(svm.score(X_test, y_test))
         https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
       n_iter_i = _check_optimize_result(
 
-
 ### Sentiment analysis for movie reviews
 
 In this exercise you'll explore the probabilities outputted by logistic
@@ -136,8 +127,6 @@ positive (+1) or negative (-1).
 
 **Answer**
 
-
-
 ```python
 pip install pandas
 ```
@@ -150,8 +139,6 @@ pip install pandas
     Requirement already satisfied: tzdata>=2022.7 in /home/vscode/.local/lib/python3.12/site-packages (from pandas) (2024.1)
     Requirement already satisfied: six>=1.5 in /home/vscode/.local/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
     Note: you may need to restart the kernel to use updated packages.
-
-
 
 ```python
 # added/edited
@@ -168,7 +155,6 @@ vectorizer = CountVectorizer(vocabulary=vocabulary)
 def get_features(review):
     return vectorizer.transform([review])
 ```
-
 
 ```python
 # Instantiate logistic regression and train
@@ -203,7 +189,6 @@ print("Probability of positive review:", lr.predict_proba(review2_features)[0,1]
         https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
       n_iter_i = _check_optimize_result(
 
-
 ### Visualizing decision boundaries
 
 In this exercise, you'll visualize the decision boundaries of various
@@ -223,12 +208,9 @@ into `X`, along with binary labels in `y`.
 
 **Answer**
 
-
-
 ```python
 pip install matplotlib
 ```
-
 
 ```python
 # added/edited
@@ -236,7 +218,6 @@ import matplotlib.pyplot as plt
 X = np.array([[11.45,  2.4 ], [13.62,  4.95], [13.88,  1.89], [12.42,  2.55], [12.81,  2.31], [12.58,  1.29], [13.83,  1.57], [13.07,  1.5 ], [12.7 ,  3.55], [13.77,  1.9 ], [12.84,  2.96], [12.37,  1.63], [13.51,  1.8 ], [13.87,  1.9 ], [12.08,  1.39], [13.58,  1.66], [13.08,  3.9 ], [11.79,  2.13], [12.45,  3.03], [13.68,  1.83], [13.52,  3.17], [13.5 ,  3.12], [12.87,  4.61], [14.02,  1.68], [12.29,  3.17], [12.08,  1.13], [12.7 ,  3.87], [11.03,  1.51], [13.32,  3.24], [14.13,  4.1 ], [13.49,  1.66], [11.84,  2.89], [13.05,  2.05], [12.72,  1.81], [12.82,  3.37], [13.4 ,  4.6 ], [14.22,  3.99], [13.72,  1.43], [12.93,  2.81], [11.64,  2.06], [12.29,  1.61], [11.65,  1.67], [13.28,  1.64], [12.93,  3.8 ], [13.86,  1.35], [11.82,  1.72], [12.37,  1.17], [12.42,  1.61], [13.9 ,  1.68], [14.16,  2.51]])
 y = np.array([ True,  True, False,  True,  True,  True, False, False,  True, False,  True,  True, False, False,  True, False,  True,  True, True, False,  True,  True,  True, False,  True,  True,  True, True,  True,  True,  True,  True, False,  True,  True,  True, False, False,  True,  True,  True,  True, False, False, False, True,  True,  True, False,  True])
 ```
-
 
 ```python
 # added/edited
@@ -346,8 +327,6 @@ def plot_4_classifiers(X, y, clfs):
     /tmp/ipykernel_2885/3944463996.py:66: SyntaxWarning: invalid escape sequence '\D'
       cbar.ax.set_ylabel('probability of red $\Delta$ class', fontsize=20, rotation=270, labelpad=30)
 
-
-
 ```python
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC, LinearSVC
@@ -383,12 +362,7 @@ plt.show()
     /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
-
-
-    
 ![png](notebook_files/notebook_15_1.png)
-    
-
 
 ## Loss functions
 
@@ -414,8 +388,6 @@ along with a linear classifier object `model`.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 from sklearn.linear_model import LogisticRegression
@@ -424,418 +396,6 @@ y = np.array([-1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, -1, -1, -1
 model = LogisticRegression()
 model.fit(X, y)
 ```
-
-
-
-
-<style>#sk-container-id-13 {
-  /* Definition of color scheme common for light and dark mode */
-  --sklearn-color-text: black;
-  --sklearn-color-line: gray;
-  /* Definition of color scheme for unfitted estimators */
-  --sklearn-color-unfitted-level-0: #fff5e6;
-  --sklearn-color-unfitted-level-1: #f6e4d2;
-  --sklearn-color-unfitted-level-2: #ffe0b3;
-  --sklearn-color-unfitted-level-3: chocolate;
-  /* Definition of color scheme for fitted estimators */
-  --sklearn-color-fitted-level-0: #f0f8ff;
-  --sklearn-color-fitted-level-1: #d4ebff;
-  --sklearn-color-fitted-level-2: #b3dbfd;
-  --sklearn-color-fitted-level-3: cornflowerblue;
-
-  /* Specific color for light theme */
-  --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
-  --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, white)));
-  --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
-  --sklearn-color-icon: #696969;
-
-  @media (prefers-color-scheme: dark) {
-    /* Redefinition of color scheme for dark theme */
-    --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
-    --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, #111)));
-    --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
-    --sklearn-color-icon: #878787;
-  }
-}
-
-#sk-container-id-13 {
-  color: var(--sklearn-color-text);
-}
-
-#sk-container-id-13 pre {
-  padding: 0;
-}
-
-#sk-container-id-13 input.sk-hidden--visually {
-  border: 0;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-#sk-container-id-13 div.sk-dashed-wrapped {
-  border: 1px dashed var(--sklearn-color-line);
-  margin: 0 0.4em 0.5em 0.4em;
-  box-sizing: border-box;
-  padding-bottom: 0.4em;
-  background-color: var(--sklearn-color-background);
-}
-
-#sk-container-id-13 div.sk-container {
-  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
-     but bootstrap.min.css set `[hidden] { display: none !important; }`
-     so we also need the `!important` here to be able to override the
-     default hidden behavior on the sphinx rendered scikit-learn.org.
-     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
-  display: inline-block !important;
-  position: relative;
-}
-
-#sk-container-id-13 div.sk-text-repr-fallback {
-  display: none;
-}
-
-div.sk-parallel-item,
-div.sk-serial,
-div.sk-item {
-  /* draw centered vertical line to link estimators */
-  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
-  background-size: 2px 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-/* Parallel-specific style estimator block */
-
-#sk-container-id-13 div.sk-parallel-item::after {
-  content: "";
-  width: 100%;
-  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
-  flex-grow: 1;
-}
-
-#sk-container-id-13 div.sk-parallel {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  background-color: var(--sklearn-color-background);
-  position: relative;
-}
-
-#sk-container-id-13 div.sk-parallel-item {
-  display: flex;
-  flex-direction: column;
-}
-
-#sk-container-id-13 div.sk-parallel-item:first-child::after {
-  align-self: flex-end;
-  width: 50%;
-}
-
-#sk-container-id-13 div.sk-parallel-item:last-child::after {
-  align-self: flex-start;
-  width: 50%;
-}
-
-#sk-container-id-13 div.sk-parallel-item:only-child::after {
-  width: 0;
-}
-
-/* Serial-specific style estimator block */
-
-#sk-container-id-13 div.sk-serial {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--sklearn-color-background);
-  padding-right: 1em;
-  padding-left: 1em;
-}
-
-
-/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
-clickable and can be expanded/collapsed.
-- Pipeline and ColumnTransformer use this feature and define the default style
-- Estimators will overwrite some part of the style using the `sk-estimator` class
-*/
-
-/* Pipeline and ColumnTransformer style (default) */
-
-#sk-container-id-13 div.sk-toggleable {
-  /* Default theme specific background. It is overwritten whether we have a
-  specific estimator or a Pipeline/ColumnTransformer */
-  background-color: var(--sklearn-color-background);
-}
-
-/* Toggleable label */
-#sk-container-id-13 label.sk-toggleable__label {
-  cursor: pointer;
-  display: block;
-  width: 100%;
-  margin-bottom: 0;
-  padding: 0.5em;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-#sk-container-id-13 label.sk-toggleable__label-arrow:before {
-  /* Arrow on the left of the label */
-  content: "▸";
-  float: left;
-  margin-right: 0.25em;
-  color: var(--sklearn-color-icon);
-}
-
-#sk-container-id-13 label.sk-toggleable__label-arrow:hover:before {
-  color: var(--sklearn-color-text);
-}
-
-/* Toggleable content - dropdown */
-
-#sk-container-id-13 div.sk-toggleable__content {
-  max-height: 0;
-  max-width: 0;
-  overflow: hidden;
-  text-align: left;
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-0);
-}
-
-#sk-container-id-13 div.sk-toggleable__content.fitted {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-0);
-}
-
-#sk-container-id-13 div.sk-toggleable__content pre {
-  margin: 0.2em;
-  border-radius: 0.25em;
-  color: var(--sklearn-color-text);
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-0);
-}
-
-#sk-container-id-13 div.sk-toggleable__content.fitted pre {
-  /* unfitted */
-  background-color: var(--sklearn-color-fitted-level-0);
-}
-
-#sk-container-id-13 input.sk-toggleable__control:checked~div.sk-toggleable__content {
-  /* Expand drop-down */
-  max-height: 200px;
-  max-width: 100%;
-  overflow: auto;
-}
-
-#sk-container-id-13 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
-  content: "▾";
-}
-
-/* Pipeline/ColumnTransformer-specific style */
-
-#sk-container-id-13 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
-  color: var(--sklearn-color-text);
-  background-color: var(--sklearn-color-unfitted-level-2);
-}
-
-#sk-container-id-13 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
-  background-color: var(--sklearn-color-fitted-level-2);
-}
-
-/* Estimator-specific style */
-
-/* Colorize estimator box */
-#sk-container-id-13 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-2);
-}
-
-#sk-container-id-13 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-2);
-}
-
-#sk-container-id-13 div.sk-label label.sk-toggleable__label,
-#sk-container-id-13 div.sk-label label {
-  /* The background is the default theme color */
-  color: var(--sklearn-color-text-on-default-background);
-}
-
-/* On hover, darken the color of the background */
-#sk-container-id-13 div.sk-label:hover label.sk-toggleable__label {
-  color: var(--sklearn-color-text);
-  background-color: var(--sklearn-color-unfitted-level-2);
-}
-
-/* Label box, darken color on hover, fitted */
-#sk-container-id-13 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
-  color: var(--sklearn-color-text);
-  background-color: var(--sklearn-color-fitted-level-2);
-}
-
-/* Estimator label */
-
-#sk-container-id-13 div.sk-label label {
-  font-family: monospace;
-  font-weight: bold;
-  display: inline-block;
-  line-height: 1.2em;
-}
-
-#sk-container-id-13 div.sk-label-container {
-  text-align: center;
-}
-
-/* Estimator-specific */
-#sk-container-id-13 div.sk-estimator {
-  font-family: monospace;
-  border: 1px dotted var(--sklearn-color-border-box);
-  border-radius: 0.25em;
-  box-sizing: border-box;
-  margin-bottom: 0.5em;
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-0);
-}
-
-#sk-container-id-13 div.sk-estimator.fitted {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-0);
-}
-
-/* on hover */
-#sk-container-id-13 div.sk-estimator:hover {
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-2);
-}
-
-#sk-container-id-13 div.sk-estimator.fitted:hover {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-2);
-}
-
-/* Specification for estimator info (e.g. "i" and "?") */
-
-/* Common style for "i" and "?" */
-
-.sk-estimator-doc-link,
-a:link.sk-estimator-doc-link,
-a:visited.sk-estimator-doc-link {
-  float: right;
-  font-size: smaller;
-  line-height: 1em;
-  font-family: monospace;
-  background-color: var(--sklearn-color-background);
-  border-radius: 1em;
-  height: 1em;
-  width: 1em;
-  text-decoration: none !important;
-  margin-left: 1ex;
-  /* unfitted */
-  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
-  color: var(--sklearn-color-unfitted-level-1);
-}
-
-.sk-estimator-doc-link.fitted,
-a:link.sk-estimator-doc-link.fitted,
-a:visited.sk-estimator-doc-link.fitted {
-  /* fitted */
-  border: var(--sklearn-color-fitted-level-1) 1pt solid;
-  color: var(--sklearn-color-fitted-level-1);
-}
-
-/* On hover */
-div.sk-estimator:hover .sk-estimator-doc-link:hover,
-.sk-estimator-doc-link:hover,
-div.sk-label-container:hover .sk-estimator-doc-link:hover,
-.sk-estimator-doc-link:hover {
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-3);
-  color: var(--sklearn-color-background);
-  text-decoration: none;
-}
-
-div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
-.sk-estimator-doc-link.fitted:hover,
-div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
-.sk-estimator-doc-link.fitted:hover {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-3);
-  color: var(--sklearn-color-background);
-  text-decoration: none;
-}
-
-/* Span, style for the box shown on hovering the info icon */
-.sk-estimator-doc-link span {
-  display: none;
-  z-index: 9999;
-  position: relative;
-  font-weight: normal;
-  right: .2ex;
-  padding: .5ex;
-  margin: .5ex;
-  width: min-content;
-  min-width: 20ex;
-  max-width: 50ex;
-  color: var(--sklearn-color-text);
-  box-shadow: 2pt 2pt 4pt #999;
-  /* unfitted */
-  background: var(--sklearn-color-unfitted-level-0);
-  border: .5pt solid var(--sklearn-color-unfitted-level-3);
-}
-
-.sk-estimator-doc-link.fitted span {
-  /* fitted */
-  background: var(--sklearn-color-fitted-level-0);
-  border: var(--sklearn-color-fitted-level-3);
-}
-
-.sk-estimator-doc-link:hover span {
-  display: block;
-}
-
-/* "?"-specific style due to the `<a>` HTML tag */
-
-#sk-container-id-13 a.estimator_doc_link {
-  float: right;
-  font-size: 1rem;
-  line-height: 1em;
-  font-family: monospace;
-  background-color: var(--sklearn-color-background);
-  border-radius: 1rem;
-  height: 1rem;
-  width: 1rem;
-  text-decoration: none;
-  /* unfitted */
-  color: var(--sklearn-color-unfitted-level-1);
-  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
-}
-
-#sk-container-id-13 a.estimator_doc_link.fitted {
-  /* fitted */
-  border: var(--sklearn-color-fitted-level-1) 1pt solid;
-  color: var(--sklearn-color-fitted-level-1);
-}
-
-/* On hover */
-#sk-container-id-13 a.estimator_doc_link:hover {
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-3);
-  color: var(--sklearn-color-background);
-  text-decoration: none;
-}
-
-#sk-container-id-13 a.estimator_doc_link.fitted:hover {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-3);
-}
-</style><div id="sk-container-id-13" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-13" type="checkbox" checked><label for="sk-estimator-id-13" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;LogisticRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression()</pre></div> </div></div></div></div>
-
-
-
 
 ```python
 # Set the coefficients
@@ -855,15 +415,9 @@ print("Number of errors:", num_err)
     /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
-
-
-    
 ![png](notebook_files/notebook_18_1.png)
-    
-
 
     Number of errors: 3
-
 
 ### Minimizing a loss function
 
@@ -881,8 +435,6 @@ include an intercept in our regression model.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 from scipy.optimize import minimize
@@ -891,7 +443,6 @@ boston = np.genfromtxt('boston.csv', delimiter=',', skip_header=1)
 X = boston[:, :-1]
 y = boston[:, -1]
 ```
-
 
 ```python
 # The squared error, summed over training examples
@@ -920,7 +471,6 @@ print(lr.coef_)
      -0.00693123 -0.96899503  0.16606245 -0.00913851 -0.39533609  0.01500025
      -0.41893787]
 
-
 ### Comparing the logistic and hinge losses
 
 In this exercise you'll create a plot of the logistic and hinge losses
@@ -934,8 +484,6 @@ The loss function diagram from the video is shown on the right.
   points** so that they are plotted.
 
 **Answer**
-
-
 
 ```python
 # Mathematical functions for logistic and hinge losses
@@ -952,11 +500,7 @@ plt.legend()
 plt.show()
 ```
 
-
-    
 ![png](notebook_files/notebook_23_0.png)
-    
-
 
 ### Implementing logistic regression
 
@@ -979,8 +523,6 @@ in your environment, and the `sklearn` breast cancer prediction dataset
 
 **Answer**
 
-
-
 ```python
 # added/edited
 from scipy.optimize import minimize
@@ -989,7 +531,6 @@ breast = np.genfromtxt('breast.csv', delimiter=',', skip_header=1)
 X = breast[:, :-1]
 y = breast[:, -1]
 ```
-
 
 ```python
 # The logistic loss, summed over training examples
@@ -1013,7 +554,6 @@ print(lr.coef_)
      -0.85110636 -2.44100368 -0.4528488   0.43353788]
     [[ 2.71458587 -1.65402326  2.18958756 -9.29661809 -1.08819416  0.20522475
       -0.85716057 -2.396583   -0.45787656  0.42168857]]
-
 
 ## Logistic regression
 
@@ -1039,14 +579,11 @@ lists.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 X_train, X_valid, y_train, y_valid = train_test_split(digits.data, digits.target, stratify=digits.target, random_state=42)
 C_values = [0.001, 0.01, 0.1, 1, 10, 100, 1000]
 ```
-
 
 ```python
 # Train and validaton errors initialized as empty list
@@ -1102,12 +639,7 @@ plt.show()
         https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
       n_iter_i = _check_optimize_result(
 
-
-
-    
 ![png](notebook_files/notebook_29_1.png)
-    
-
 
 ### Logistic regression and feature selection
 
@@ -1126,15 +658,12 @@ We'll search for the best value of `C` using scikit-learn's
 
 **Answer**
 
-
-
 ```python
 # added/edited
 from sklearn.model_selection import GridSearchCV
 X_train, y_train = load_svmlight_file('aclImdb/train/labeledBow.feat')
 y_train = np.where(y_train < 5, -1.0, 1.0)
 ```
-
 
 ```python
 # Specify L1 regularization
@@ -1158,7 +687,6 @@ print("Number of selected features:", np.count_nonzero(coefs))
     Total number of features: 89527
     Number of selected features: 1106
 
-
 ### Identifying the most positive and negative words
 
 In this exercise we'll try to interpret the coefficients of a logistic
@@ -1177,14 +705,11 @@ word "think" appeared in that movie review.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 vocab = pd.read_csv('aclImdb/imdb.vocab', header=None, names=['word']).drop_duplicates()['word'].values
 lr = best_lr
 ```
-
 
 ```python
 # Get the indices of the sorted cofficients
@@ -1207,8 +732,6 @@ print("\n")
     Most positive words: excellent, refreshing, wonderfully, perfect, superb, 
     
     Most negative words: waste, worst, disappointment, poorly, awful, 
-    
-
 
 ### Regularization and probabilities
 
@@ -1230,15 +753,12 @@ environment as `X` and `y`.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 binary = pd.read_csv('binary.csv', header=None).to_numpy()
 X = binary[:, :-1]
 y = binary[:, -1]
 ```
-
 
 ```python
 # Set the regularization strength
@@ -1258,16 +778,9 @@ print("Maximum predicted probability", np.max(prob))
     /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
-
-
-    
 ![png](notebook_files/notebook_38_1.png)
-    
-
 
     Maximum predicted probability 0.9973152198703695
-
-
 
 ```python
 # Set the regularization strength
@@ -1287,15 +800,9 @@ print("Maximum predicted probability", np.max(prob))
     /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
-
-
-    
 ![png](notebook_files/notebook_39_1.png)
-    
-
 
     Maximum predicted probability 0.9351932155190785
-
 
 ### Visualizing easy and difficult examples
 
@@ -1319,8 +826,6 @@ image.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 X, y = digits.data, digits.target
@@ -1337,7 +842,6 @@ def show_digit(i, lr=None):
         plt.title("label=%d, prediction=%d, proba=%.2f" % (y[i], pred, pred_prob))
         plt.show()
 ```
-
 
 ```python
 lr = LogisticRegression()
@@ -1367,22 +871,12 @@ show_digit(proba_inds[0], lr)
     /tmp/ipykernel_2885/3635067261.py:13: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
       plt.title("label=%d, prediction=%d, proba=%.2f" % (y[i], pred, pred_prob))
 
-
-
-    
 ![png](notebook_files/notebook_42_1.png)
-    
-
 
     /tmp/ipykernel_2885/3635067261.py:13: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
       plt.title("label=%d, prediction=%d, proba=%.2f" % (y[i], pred, pred_prob))
 
-
-
-    
 ![png](notebook_files/notebook_42_3.png)
-    
-
 
 ### Fitting multi-class logistic regression
 
@@ -1401,13 +895,10 @@ is already loaded and split into `X_train`, `y_train`, `X_test`, and
 
 **Answer**
 
-
-
 ```python
 # added/edited
 X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target)
 ```
-
 
 ```python
 # Fit one-vs-rest logistic regression classifier
@@ -1454,7 +945,6 @@ print("Softmax test accuracy    :", lr_mn.score(X_test, y_test))
         https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
       n_iter_i = _check_optimize_result(
 
-
 ### Visualizing multi-class logistic regression
 
 In this exercise we'll continue with the two types of multi-class
@@ -1478,8 +968,6 @@ it's using behind the scenes.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 toy = pd.read_csv('toy.csv', header=None).to_numpy()
@@ -1495,419 +983,6 @@ lr_ovr.fit(X_train, y_train)
       warnings.warn(
     /home/vscode/.local/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
       warnings.warn(
-
-
-
-
-
-<style>#sk-container-id-15 {
-  /* Definition of color scheme common for light and dark mode */
-  --sklearn-color-text: black;
-  --sklearn-color-line: gray;
-  /* Definition of color scheme for unfitted estimators */
-  --sklearn-color-unfitted-level-0: #fff5e6;
-  --sklearn-color-unfitted-level-1: #f6e4d2;
-  --sklearn-color-unfitted-level-2: #ffe0b3;
-  --sklearn-color-unfitted-level-3: chocolate;
-  /* Definition of color scheme for fitted estimators */
-  --sklearn-color-fitted-level-0: #f0f8ff;
-  --sklearn-color-fitted-level-1: #d4ebff;
-  --sklearn-color-fitted-level-2: #b3dbfd;
-  --sklearn-color-fitted-level-3: cornflowerblue;
-
-  /* Specific color for light theme */
-  --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
-  --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, white)));
-  --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
-  --sklearn-color-icon: #696969;
-
-  @media (prefers-color-scheme: dark) {
-    /* Redefinition of color scheme for dark theme */
-    --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
-    --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, #111)));
-    --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
-    --sklearn-color-icon: #878787;
-  }
-}
-
-#sk-container-id-15 {
-  color: var(--sklearn-color-text);
-}
-
-#sk-container-id-15 pre {
-  padding: 0;
-}
-
-#sk-container-id-15 input.sk-hidden--visually {
-  border: 0;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-#sk-container-id-15 div.sk-dashed-wrapped {
-  border: 1px dashed var(--sklearn-color-line);
-  margin: 0 0.4em 0.5em 0.4em;
-  box-sizing: border-box;
-  padding-bottom: 0.4em;
-  background-color: var(--sklearn-color-background);
-}
-
-#sk-container-id-15 div.sk-container {
-  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
-     but bootstrap.min.css set `[hidden] { display: none !important; }`
-     so we also need the `!important` here to be able to override the
-     default hidden behavior on the sphinx rendered scikit-learn.org.
-     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
-  display: inline-block !important;
-  position: relative;
-}
-
-#sk-container-id-15 div.sk-text-repr-fallback {
-  display: none;
-}
-
-div.sk-parallel-item,
-div.sk-serial,
-div.sk-item {
-  /* draw centered vertical line to link estimators */
-  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
-  background-size: 2px 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-/* Parallel-specific style estimator block */
-
-#sk-container-id-15 div.sk-parallel-item::after {
-  content: "";
-  width: 100%;
-  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
-  flex-grow: 1;
-}
-
-#sk-container-id-15 div.sk-parallel {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  background-color: var(--sklearn-color-background);
-  position: relative;
-}
-
-#sk-container-id-15 div.sk-parallel-item {
-  display: flex;
-  flex-direction: column;
-}
-
-#sk-container-id-15 div.sk-parallel-item:first-child::after {
-  align-self: flex-end;
-  width: 50%;
-}
-
-#sk-container-id-15 div.sk-parallel-item:last-child::after {
-  align-self: flex-start;
-  width: 50%;
-}
-
-#sk-container-id-15 div.sk-parallel-item:only-child::after {
-  width: 0;
-}
-
-/* Serial-specific style estimator block */
-
-#sk-container-id-15 div.sk-serial {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--sklearn-color-background);
-  padding-right: 1em;
-  padding-left: 1em;
-}
-
-
-/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
-clickable and can be expanded/collapsed.
-- Pipeline and ColumnTransformer use this feature and define the default style
-- Estimators will overwrite some part of the style using the `sk-estimator` class
-*/
-
-/* Pipeline and ColumnTransformer style (default) */
-
-#sk-container-id-15 div.sk-toggleable {
-  /* Default theme specific background. It is overwritten whether we have a
-  specific estimator or a Pipeline/ColumnTransformer */
-  background-color: var(--sklearn-color-background);
-}
-
-/* Toggleable label */
-#sk-container-id-15 label.sk-toggleable__label {
-  cursor: pointer;
-  display: block;
-  width: 100%;
-  margin-bottom: 0;
-  padding: 0.5em;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-#sk-container-id-15 label.sk-toggleable__label-arrow:before {
-  /* Arrow on the left of the label */
-  content: "▸";
-  float: left;
-  margin-right: 0.25em;
-  color: var(--sklearn-color-icon);
-}
-
-#sk-container-id-15 label.sk-toggleable__label-arrow:hover:before {
-  color: var(--sklearn-color-text);
-}
-
-/* Toggleable content - dropdown */
-
-#sk-container-id-15 div.sk-toggleable__content {
-  max-height: 0;
-  max-width: 0;
-  overflow: hidden;
-  text-align: left;
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-0);
-}
-
-#sk-container-id-15 div.sk-toggleable__content.fitted {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-0);
-}
-
-#sk-container-id-15 div.sk-toggleable__content pre {
-  margin: 0.2em;
-  border-radius: 0.25em;
-  color: var(--sklearn-color-text);
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-0);
-}
-
-#sk-container-id-15 div.sk-toggleable__content.fitted pre {
-  /* unfitted */
-  background-color: var(--sklearn-color-fitted-level-0);
-}
-
-#sk-container-id-15 input.sk-toggleable__control:checked~div.sk-toggleable__content {
-  /* Expand drop-down */
-  max-height: 200px;
-  max-width: 100%;
-  overflow: auto;
-}
-
-#sk-container-id-15 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
-  content: "▾";
-}
-
-/* Pipeline/ColumnTransformer-specific style */
-
-#sk-container-id-15 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
-  color: var(--sklearn-color-text);
-  background-color: var(--sklearn-color-unfitted-level-2);
-}
-
-#sk-container-id-15 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
-  background-color: var(--sklearn-color-fitted-level-2);
-}
-
-/* Estimator-specific style */
-
-/* Colorize estimator box */
-#sk-container-id-15 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-2);
-}
-
-#sk-container-id-15 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-2);
-}
-
-#sk-container-id-15 div.sk-label label.sk-toggleable__label,
-#sk-container-id-15 div.sk-label label {
-  /* The background is the default theme color */
-  color: var(--sklearn-color-text-on-default-background);
-}
-
-/* On hover, darken the color of the background */
-#sk-container-id-15 div.sk-label:hover label.sk-toggleable__label {
-  color: var(--sklearn-color-text);
-  background-color: var(--sklearn-color-unfitted-level-2);
-}
-
-/* Label box, darken color on hover, fitted */
-#sk-container-id-15 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
-  color: var(--sklearn-color-text);
-  background-color: var(--sklearn-color-fitted-level-2);
-}
-
-/* Estimator label */
-
-#sk-container-id-15 div.sk-label label {
-  font-family: monospace;
-  font-weight: bold;
-  display: inline-block;
-  line-height: 1.2em;
-}
-
-#sk-container-id-15 div.sk-label-container {
-  text-align: center;
-}
-
-/* Estimator-specific */
-#sk-container-id-15 div.sk-estimator {
-  font-family: monospace;
-  border: 1px dotted var(--sklearn-color-border-box);
-  border-radius: 0.25em;
-  box-sizing: border-box;
-  margin-bottom: 0.5em;
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-0);
-}
-
-#sk-container-id-15 div.sk-estimator.fitted {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-0);
-}
-
-/* on hover */
-#sk-container-id-15 div.sk-estimator:hover {
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-2);
-}
-
-#sk-container-id-15 div.sk-estimator.fitted:hover {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-2);
-}
-
-/* Specification for estimator info (e.g. "i" and "?") */
-
-/* Common style for "i" and "?" */
-
-.sk-estimator-doc-link,
-a:link.sk-estimator-doc-link,
-a:visited.sk-estimator-doc-link {
-  float: right;
-  font-size: smaller;
-  line-height: 1em;
-  font-family: monospace;
-  background-color: var(--sklearn-color-background);
-  border-radius: 1em;
-  height: 1em;
-  width: 1em;
-  text-decoration: none !important;
-  margin-left: 1ex;
-  /* unfitted */
-  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
-  color: var(--sklearn-color-unfitted-level-1);
-}
-
-.sk-estimator-doc-link.fitted,
-a:link.sk-estimator-doc-link.fitted,
-a:visited.sk-estimator-doc-link.fitted {
-  /* fitted */
-  border: var(--sklearn-color-fitted-level-1) 1pt solid;
-  color: var(--sklearn-color-fitted-level-1);
-}
-
-/* On hover */
-div.sk-estimator:hover .sk-estimator-doc-link:hover,
-.sk-estimator-doc-link:hover,
-div.sk-label-container:hover .sk-estimator-doc-link:hover,
-.sk-estimator-doc-link:hover {
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-3);
-  color: var(--sklearn-color-background);
-  text-decoration: none;
-}
-
-div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
-.sk-estimator-doc-link.fitted:hover,
-div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
-.sk-estimator-doc-link.fitted:hover {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-3);
-  color: var(--sklearn-color-background);
-  text-decoration: none;
-}
-
-/* Span, style for the box shown on hovering the info icon */
-.sk-estimator-doc-link span {
-  display: none;
-  z-index: 9999;
-  position: relative;
-  font-weight: normal;
-  right: .2ex;
-  padding: .5ex;
-  margin: .5ex;
-  width: min-content;
-  min-width: 20ex;
-  max-width: 50ex;
-  color: var(--sklearn-color-text);
-  box-shadow: 2pt 2pt 4pt #999;
-  /* unfitted */
-  background: var(--sklearn-color-unfitted-level-0);
-  border: .5pt solid var(--sklearn-color-unfitted-level-3);
-}
-
-.sk-estimator-doc-link.fitted span {
-  /* fitted */
-  background: var(--sklearn-color-fitted-level-0);
-  border: var(--sklearn-color-fitted-level-3);
-}
-
-.sk-estimator-doc-link:hover span {
-  display: block;
-}
-
-/* "?"-specific style due to the `<a>` HTML tag */
-
-#sk-container-id-15 a.estimator_doc_link {
-  float: right;
-  font-size: 1rem;
-  line-height: 1em;
-  font-family: monospace;
-  background-color: var(--sklearn-color-background);
-  border-radius: 1rem;
-  height: 1rem;
-  width: 1rem;
-  text-decoration: none;
-  /* unfitted */
-  color: var(--sklearn-color-unfitted-level-1);
-  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
-}
-
-#sk-container-id-15 a.estimator_doc_link.fitted {
-  /* fitted */
-  border: var(--sklearn-color-fitted-level-1) 1pt solid;
-  color: var(--sklearn-color-fitted-level-1);
-}
-
-/* On hover */
-#sk-container-id-15 a.estimator_doc_link:hover {
-  /* unfitted */
-  background-color: var(--sklearn-color-unfitted-level-3);
-  color: var(--sklearn-color-background);
-  text-decoration: none;
-}
-
-#sk-container-id-15 a.estimator_doc_link.fitted:hover {
-  /* fitted */
-  background-color: var(--sklearn-color-fitted-level-3);
-}
-</style><div id="sk-container-id-15" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegression(C=100, multi_class=&#x27;ovr&#x27;)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-15" type="checkbox" checked><label for="sk-estimator-id-15" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;LogisticRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression(C=100, multi_class=&#x27;ovr&#x27;)</pre></div> </div></div></div></div>
-
-
-
 
 ```python
 # Print training accuracies
@@ -1931,12 +1006,7 @@ plot_classifier(X_train, y_train==1, lr_class_1)
     /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
-
-
-    
 ![png](notebook_files/notebook_48_2.png)
-    
-
 
 ### One-vs-rest SVM
 
@@ -1957,8 +1027,6 @@ classifier for class 1 vs. rest.
 
 **Answer**
 
-
-
 ```python
 # We'll use SVC instead of LinearSVC from now on
 from sklearn.svm import SVC
@@ -1974,12 +1042,7 @@ plot_classifier(X_train, y_train==1, svm_class_1)
     /tmp/ipykernel_2885/3944463996.py:73: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       ax.scatter(X0[y==labels[1]], X1[y==labels[1]], cmap=plt.cm.coolwarm,
 
-
-
-    
 ![png](notebook_files/notebook_50_1.png)
-    
-
 
 ## Support Vector Machines
 
@@ -2002,15 +1065,12 @@ directly.)
 
 **Answer**
 
-
-
 ```python
 # added/edited
 wine = pd.read_csv('wine.csv', header=None).to_numpy()
 X = wine[:, :-1]
 y = wine[:, -1]
 ```
-
 
 ```python
 # Train a linear SVM
@@ -2030,21 +1090,12 @@ svm_small.fit(X_small, y_small)
 plot_classifier(X_small, y_small, svm_small, lims=(11,15,0,6))
 ```
 
-
-    
 ![png](notebook_files/notebook_53_0.png)
-    
-
 
     Number of original examples 178
     Number of support vectors 81
 
-
-
-    
 ![png](notebook_files/notebook_53_2.png)
-    
-
 
 ### GridSearchCV warm-up
 
@@ -2063,13 +1114,10 @@ image is a "2", is already loaded into the variables `X` and `y`.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 X, _, y, _ = train_test_split(digits.data, digits.target, test_size=0.5, stratify=digits.target)
 ```
-
 
 ```python
 # Instantiate an RBF SVM
@@ -2085,7 +1133,6 @@ print("Best CV params", searcher.best_params_)
 ```
 
     Best CV params {'gamma': 0.001}
-
 
 ### Jointly tuning gamma and C with GridSearchCV
 
@@ -2110,13 +1157,10 @@ sensible.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.5, stratify=digits.target)
 ```
-
 
 ```python
 # Instantiate an RBF SVM
@@ -2139,7 +1183,6 @@ print("Test accuracy of best grid search hypers:", searcher.score(X_test, y_test
     Best CV accuracy 0.9933209186840471
     Test accuracy of best grid search hypers: 0.985539488320356
 
-
 ### Using SGDClassifier
 
 In this final coding exercise, you'll do a hyperparameter search over
@@ -2154,14 +1197,11 @@ SVM) using `SGDClassifier()`.
 
 **Answer**
 
-
-
 ```python
 # added/edited
 from sklearn.linear_model import SGDClassifier
 X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.7, stratify=digits.target)
 ```
-
 
 ```python
 # We set random_state=0 for reproducibility 
@@ -2182,4 +1222,3 @@ print("Test accuracy of best grid search hypers:", searcher.score(X_test, y_test
     Best CV params {'alpha': 0.1, 'loss': 'hinge'}
     Best CV accuracy 0.9312718378756115
     Test accuracy of best grid search hypers: 0.9300476947535771
-
